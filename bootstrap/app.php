@@ -14,6 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->validateCsrfTokens(except: [
             '/user-registration',
             '/user-login',
+            '/send-otp',
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
